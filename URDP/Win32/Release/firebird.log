@@ -1,0 +1,24 @@
+
+SKRYBIN	Fri Apr 10 09:30:52 2020
+	INET/inet_error: read errno = 10053, server host = suupmagellan, address = 172.16.1.27/3050
+
+
+SKRYBIN	Fri Apr 10 09:30:52 2020
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database.
+	Uncommitted work may have been lost.
+	Error writing data to the connection.
+
+
+SKRYBIN	Mon Apr 13 09:33:12 2020
+	INET/inet_error: read errno = 10053, server host = suupmagellan, address = 172.16.1.27/3050
+
+
+SKRYBIN	Mon Apr 13 09:33:12 2020
+	REMOTE INTERFACE/gds__detach: Unsuccesful detach from database.
+	Uncommitted work may have been lost.
+	Error writing data to the connection.
+
+
+ITO-ACER	Wed Jul 24 12:11:20 2024
+	INET/INET_connect: getaddrinfo(suupmagellan,3050) failed: Этот хост неизвестен. 
+

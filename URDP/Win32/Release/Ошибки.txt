@@ -1,0 +1,11 @@
+KB2830477 - обновление RDP клиента версии 8.1 - удаляем это обновление, перезагружаем комп, качаем свежее с сайта мелкосовт, устанавливаем, ошибка должна уйти.
+KB2913751 - обновлени RDP
+KB2857650 - попробовать удалить
+ сносить или не ставить KB2830477 на клиентских машинах
+- сносить или не ставить KB2962806 на терминальных серверах
+
+kb2962806- удаление этого обновления помогло, соединений больше 7ми.
+
+https://mremoteng.atlassian.net/browse/MR-864?page=com.atlassian.jira.plugin.system.issuetabpanels%3Aall-tabpanel
+https://social.technet.microsoft.com/Forums/ru-RU/ee33dbf0-7fa0-46f1-a588-8a4ab1635216/104210841077108910901086-remoteapp-109510771088108510991081?forum=WS8ru
+https://winitpro.ru/index.php/2018/09/25/analizing-rdp-logs-windows-terminal-rds/

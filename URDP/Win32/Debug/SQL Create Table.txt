@@ -1,0 +1,61 @@
+SELECT DISTINCT R.RDB$RELATION_NAME 
+ FROM RDB$RELATIONS R 
+WHERE R.RDB$RELATION_NAME = RDP_SET
+INTO :ORDSTATNAME; 
+ IF (ORDSTATNAME IS NULL) THEN
+ BEGIN
+ CREATE_GEN_RDP:='CREATE GENERATOR GEN_RDP_SET_ID START WITH 0 INCREMENT BY 1';
+ 
+ CREATE_TAB_RDP:= ' CREATE TABLE RDP_SET (
+	ID_RDP  INTEGER NOT NULL,
+	PC_NAME     VARCHAR(100) ,
+	ColorDepth     integer ,
+	BitmapPeristence     integer ,
+	CachePersistenceActive     integer ,
+	BitmapCacheSize    integer ,
+	VirtualCache16BppSize     integer ,
+	VirtualCache32BppSize     integer ,
+	VirtualCacheSize     integer ,
+	DisableCtrlAltDel     integer ,
+	DoubleClickDetect     integer ,
+	EnableWindowsKey     integer ,
+	MinutesToIdleTimeout     integer ,
+	OverallConnectionTimeout     integer ,
+	RdpPort     integer ,
+	PerformanceFlags     integer ,
+	NetworkConnectionType     integer ,
+	MaxReconnectAttempts     integer ,
+	AudioRedirectionMode     integer ,
+	AuthenticationLevel     integer ,
+	KeyboardHookMode     integer ,
+	{DisplayConnectionBar,GrabFocusOnConnect,BandwidthDetection,EnableAutoReconnect,
+	RedirectDrives,RedirectPrinters,RelativeMouseMode
+	,RedirectClipboard,RedirectDevices,RedirectPorts,ConnectToAdministerServer,
+	AudioCaptureRedirectionMode,EnableSuperPan,EnableCredSspSupport}
+	DisplayConnectionBar   BOOLEAN ,
+	GrabFocusOnConnect    BOOLEAN ,
+	BandwidthDetection    BOOLEAN ,
+	EnableAutoReconnect   BOOLEAN ,
+	RedirectDrives    BOOLEAN ,
+	RedirectPrinters    BOOLEAN ,
+	RelativeMouseMode    BOOLEAN ,
+	RedirectClipboard    BOOLEAN ,
+	RedirectDevices    BOOLEAN ,
+	RedirectPorts    BOOLEAN ,
+	ConnectToAdministerServer    BOOLEAN ,
+	AudioCaptureRedirectionMode    BOOLEAN ,
+	EnableSuperPan    BOOLEAN , //EnableCredSspSupport
+	EnableCredSspSupport    BOOLEAN)';
+	
+CREATE_PK_RDP:='ALTER TABLE RDP_SET ADD CONSTRAINT PK_RDP_SET PRIMARY KEY (ID_RDP)';
+
+CREATE_TRIG_RDP:='CREATE OR ALTER TRIGGER RDP_SET_BI FOR RDP_SET ACTIVE BEFORE INSERT POSITION 0
+as begin  if (new.id_rdp is null) then new.id_rdp = gen_id(GEN_RDP_SET_ID,1); end';
+
+EXECUTE STATEMENT CREATE_GEN_RDP;
+EXECUTE STATEMENT CREATE_TAB_RDP;
+EXECUTE STATEMENT CREATE_PK_RDP;
+EXECUTE STATEMENT CREATE_TRIG_RDP;
+
+END
+

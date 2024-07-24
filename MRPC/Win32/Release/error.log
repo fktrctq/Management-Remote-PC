@@ -1,0 +1,29 @@
+20.12.2019 12:33:26	20.12.2019/12:33:26 Update Config PC - [FireDAC][DatS]-32. Variable length column [EXPT_PC] overflow. Value length - [38], column maximum length - [10]
+20.12.2019 12:22:09	20.12.2019/12:22:09 Update Config PC - [FireDAC][DatS]-32. Variable length column [EXPT_PC] overflow. Value length - [36], column maximum length - [10]
+19.12.2019 22:49:21	19.12.2019/22:49:21 Find other table CONFIG_PC  - [FireDAC][Phys][FB]Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 32
+LIKE
+11.12.2019 12:34:48	11.12.2019/12:34:48 Update Config PC - [FireDAC][Phys][FB]Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+30.11.2019 12:48:52	30.11.2019/12:48:52 Export txt file - List index out of bounds (3)
+30.11.2019 12:43:24	30.11.2019/12:43:24 Export Excel File - List index out of bounds (3)
+30.11.2019 12:42:57	30.11.2019/12:42:57 Export Excel File - List index out of bounds (3)
+29.11.2019 23:58:54	29.11.2019/23:58:54 Export txt file - List index out of bounds (8)
+29.11.2019 23:57:32	29.11.2019/23:57:32 Export txt file - List index out of bounds (-1)
+29.11.2019 23:56:36	29.11.2019/23:56:36 Export txt file - List index out of bounds (8)
+29.11.2019 19:37:05	29.11.2019/19:37:05 Export Excel Config - Invalid pointer operation
+29.11.2019 17:16:25	29.11.2019/17:16:25 Export Excel Config - OLE error 800A03EC
+29.11.2019 17:10:12	29.11.2019/17:10:12 Export Excel Config - OLE error 800A03EC
+29.11.2019 17:06:47	29.11.2019/17:06:47 Export Excel Config - OLE error 800A03EC
+29.11.2019 17:05:56	29.11.2019/17:05:56 Export Excel Config - List index out of bounds (8)
+29.11.2019 17:04:48	29.11.2019/17:04:48 Export Excel Config - List index out of bounds (8)
+29.11.2019 17:03:39	29.11.2019/17:03:39 Export Excel Config - List index out of bounds (8)
+29.11.2019 17:03:12	29.11.2019/17:03:12 Export Excel Config - List index out of bounds (8)
+29.11.2019 17:02:03	29.11.2019/17:02:03 Export Excel Config - Argument out of range
+29.11.2019 17:01:10	29.11.2019/17:01:10 Export Excel Config - OLE error 800A03EC
+29.11.2019 16:59:59	29.11.2019/16:59:59 Export Excel Config - OLE error 800A03EC
+29.11.2019 16:57:54	29.11.2019/16:57:54 Export Excel Config - OLE error 800A03EC
+29.11.2019 16:56:50	29.11.2019/16:56:50 Export Excel Config - OLE error 800A03EC
+29.11.2019 16:54:48	29.11.2019/16:54:48 Export Excel Config - OLE error 800A03EC
+29.11.2019 16:50:10	29.11.2019/16:50:10 Export Excel Config - Invalid variant operation
+29.11.2019 16:47:21	29.11.2019/16:47:21 Export Excel Config - Invalid variant operation

@@ -1,0 +1,1 @@
+https://docs.microsoft.com/en-us/windows/desktop/wmisdk/connecting-to-wmi-remotely-starting-with-vista

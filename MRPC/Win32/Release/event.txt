@@ -1,0 +1,46 @@
+event
+Type - Ошибка, Сведения () , Общие (),Предупреждение(), Аудит отказа ()
+
+EventType property
+CIMTYPE	'uint8'
+Description	'The Type property specifies the type of event.'
+DisplayName	' Event Type'
+Fixed	True
+ValueMap	['0',                 '1',                         '2',                                           '3',                         '4',                                      '5']
+Values	['Success',     'Error',                'Warning',                             'Information',    Security Audit Success',         'Security Audit Failure']
+ 'Type' -      Сведения   Ошибка             Предупреждение                 Сведения           Аудит успеха                      Аудит отказа   
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+выбираем журнал - LogFile - «System», «Application», «Security» или другой
+имена лог файлов  смотрим тут caption Win32_NTEventlogFile 
+источники тоже тут source Win32_NTEventlogFile 
+
+
+1 столбец - EventType ( от 0 до 5 - отобржаем картинки) и текст из RecordNumber - это номер записи в выбранном журнале LogFile
+2 столбец - Type ( тип события -  Сведения Ошибка Предупреждение Сведения Аудит успеха Аудит отказа) или берем из 1го стобца
+3 столбец Дата и время (TimeGenerated) - время генерации события
+4 столбец - SourceName (Имя источника (приложения, службы, драйвера или подсистемы) )
+5 столбец - EventCode (Код события)
+
+При выборе события
+Message - Сообщение о событии, как оно отображается в журнале событий Windows
+user - пользователь
+ну и т.д.
+InsertionStrings - Список строк вставки, которые сопровождали отчет о событии Windows. Относится к подробностям
+
+
+('CREATE GLOBAL TEMPORARY TABLE '+NamePC+'_EVENT (');   //
+('ID_EVENT  INTEGER,'); //ID_EVENT  INTEGER NOT NULL PRIMARY KEY
+('PC_NAME     VARCHAR(50) ,');    // имя компа
+('PC_NAME_LOG     VARCHAR(100) ,') // 
+('LOG_FILE     VARCHAR(100) ,');   // сам лог файл
+('LOG_SOURCE     VARCHAR(150) ,');  // Источник события
+('RECORD_NUMBER    VARCHAR(50) ,'); /// номер записи
+('TYPE_INT     VARCHAR(5) ,'); /// 0-5
+('EVENT_TYPE     VARCHAR(100) ,');     // описание типа события
+('TIME_GEN    VARCHAR(100) ,');
+('MESSAGE_EVENT     VARCHAR(2000) ,');
+('INSERT_STR     VARCHAR(2000) ,');
+('EVENT_CODE     VARCHAR(50) ,');
+(' CUR_USER  VARCHAR(100)) ON COMMIT PRESERVE ROWS;');
+
